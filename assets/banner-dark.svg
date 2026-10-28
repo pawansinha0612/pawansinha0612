@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Pawan Sinha: QA, Test Automation and Performance Engineering</title>
+  <desc id="desc">A terminal running a release gate: functional, API, Playwright and k6 checks pass, release GO.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.18" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#1f6feb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#30363d" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <style>
+    .sans { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; }
+    .mono { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; font-size: 15px; }
+    .small { font-size: 12px; }
+    .txt { fill: #e6edf3; }
+    .mut { fill: #8b949e; }
+    .ok { fill: #3fb950; font-weight: 600; }
+    .acc { fill: #58a6ff; }
+    .step { opacity: 0; animation: in .5s ease-out forwards; }
+    .final { opacity: 0; animation: in .5s ease-out 3.4s forwards; }
+    .pulse { animation: pulse 2.4s ease-in-out 3.9s infinite; transform-origin: 1040px 320px; }
+    .cursor { animation: blink 1s step-end infinite; }
+    .bar { animation: fill 3.0s ease-in-out .4s forwards; transform: scaleX(0); transform-origin: 660px 0; }
+    @keyframes in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes fill { to { transform: scaleX(1); } }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+    @media (prefers-reduced-motion: reduce) {
+      .step, .final { animation: none; opacity: 1; }
+      .bar { animation: none; transform: none; }
+      .pulse, .cursor { animation: none; }
+    }
+  </style>
+
+  <rect width="1200" height="380" rx="16" fill="#0d1117"/>
+  <rect width="1200" height="380" rx="16" fill="url(#grid)"/>
+  <rect width="1200" height="380" rx="16" fill="url(#glow)"/>
+
+  <!-- left: who -->
+  <text x="64" y="104" class="mono acc" font-size="15">$ whoami</text>
+  <text x="62" y="160" class="sans txt" font-size="52" font-weight="800" letter-spacing="-1">Pawan Sinha</text>
+  <text x="64" y="200" class="sans txt" font-size="22" font-weight="600">QA · Test Automation · Performance Engineering</text>
+  <text x="64" y="234" class="sans mut" font-size="16">12+ years keeping banking, payments and lottery systems</text>
+  <text x="64" y="256" class="sans mut" font-size="16">fast and reliable when it matters most.</text>
+
+  <g class="sans" font-size="13" font-weight="600">
+    <rect x="64" y="290" width="150" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+    <text x="139" y="310" text-anchor="middle" class="txt">📍 Melbourne, AU</text>
+    <rect x="224" y="290" width="186" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+    <circle cx="242" cy="305" r="5" fill="#3fb950" class="pulse" style="transform-origin:242px 305px"/>
+    <text x="254" y="310" class="txt">Open to contracts</text>
+  </g>
+
+  <!-- right: terminal -->
+  <rect x="620" y="44" width="532" height="296" rx="12" fill="#161b22" stroke="#30363d"/>
+  <circle cx="644" cy="66" r="6" fill="#ff5f57"/><circle cx="664" cy="66" r="6" fill="#febc2e"/><circle cx="684" cy="66" r="6" fill="#28c840"/>
+  <text x="886" y="71" text-anchor="middle" class="mono mut small">release-candidate · test run</text>
+  <line x1="620" y1="86" x2="1152" y2="86" stroke="#30363d"/>
+
+  <text x="660" y="116" class="mono"><tspan class="acc">❯</tspan><tspan class="txt"> ./release-gate --env prod</tspan><tspan class="txt cursor"> ▍</tspan></text>
+  
+    <g class="step" style="animation-delay:0.6s">
+      <text x="660" y="150" class="mono ok">✓</text>
+      <text x="684" y="150" class="mono txt">functional &amp; regression</text>
+      <text x="684" y="165" class="mono mut small">manual · exploratory</text>
+      <text x="1112" y="150" class="mono ok" text-anchor="end">142 passed</text>
+    </g>
+    <g class="step" style="animation-delay:1.3s">
+      <text x="660" y="184" class="mono ok">✓</text>
+      <text x="684" y="184" class="mono txt">api tests</text>
+      <text x="684" y="199" class="mono mut small">REST · contract · negative</text>
+      <text x="1112" y="184" class="mono ok" text-anchor="end">86 passed</text>
+    </g>
+    <g class="step" style="animation-delay:2.0s">
+      <text x="660" y="218" class="mono ok">✓</text>
+      <text x="684" y="218" class="mono txt">e2e automation</text>
+      <text x="684" y="233" class="mono mut small">Playwright · 3 browsers</text>
+      <text x="1112" y="218" class="mono ok" text-anchor="end">54 passed</text>
+    </g>
+    <g class="step" style="animation-delay:2.7s">
+      <text x="660" y="252" class="mono ok">✓</text>
+      <text x="684" y="252" class="mono txt">performance</text>
+      <text x="684" y="267" class="mono mut small">k6 · 5,000 VUs · p95 412 ms</text>
+      <text x="1112" y="252" class="mono ok" text-anchor="end">SLA met</text>
+    </g>
+
+  <rect x="660" y="282" width="452" height="4" rx="2" fill="#30363d"/>
+  <rect x="660" y="282" width="452" height="4" rx="2" fill="#3fb950" class="bar"/>
+
+  <g class="final">
+    <text x="660" y="318" class="mono mut small">282 checks · 0 blockers</text>
+    <g class="pulse">
+      <rect x="1004" y="300" width="108" height="28" rx="6" fill="#3fb950"/>
+      <text x="1058" y="319" text-anchor="middle" class="mono" font-size="14" font-weight="700" fill="#0d1117">release: GO</text>
+    </g>
+  </g>
+</svg>
